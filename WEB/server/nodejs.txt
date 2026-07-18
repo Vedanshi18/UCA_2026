@@ -1,0 +1,27 @@
+NODE JS acts as :
+-Framework
+-JS Runtime Environment
+-Server side capabilites
+
+SETUP
+Go into server folder
+// npm init (initialises a server)... asks a couple of ques
+                                      (version : 1.0.0 => major.minor.patch version)
+                                      index.html is entry point for html, index.js for js
+    This creates a package.json file (Contains alot of info about meta data of the project)
+Create index.js manually in server folder
+Run using -> node index.js  (Ran an index.js file with node being the runtime environment for js)
+
+Utility provided need to be imported using -> require or import
+    For using import, we need to set type = module in package.json file
+    Module -> functions imported into an object & can be exported as a module to make it reusable, ex: http is a module/object that exports a reusable method createServer()
+    To create a server
+
+Utility -> nodemon to restart the server automatically everytime we make some changes
+// npm i -g nodemon
+
+
+In networks tab, open file localhost 
+    Preview tab parses the document
+    Response tab shows as a string without running the output
+    
