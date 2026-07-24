@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Users</title>
+</head>
+<body>
+
+<div id="users"></div>
+
+<script>
+    const worker = new Worker("worker.js");
+    worker.postMessage("start");
+    worker.onmessage = function(event) {
+        const users = event.data;
+        const div = document.getElementById("users");
+        if (users.length == 0) {
+            div.innerHTML = "No users found";
+            return;
+        }
+        for (let i = 0; i < users.length; i++) {
+            div.innerHTML +=
+                users[i].name + " - " +
+                (users[i].active ? "Active" : "Inactive") +
+                "<br>";
+        }
+    };
+
+</script>
+
+</body>
+</html>
