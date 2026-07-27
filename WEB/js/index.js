@@ -1,3 +1,4 @@
+// HTML file is index1.html
 // function clickMe() {
 //     alert("Button clicked");
 // }
@@ -10,6 +11,8 @@
 //Next class
 //Transfer JS file created to React components
 //No HTML in frameworks, managed by JS
+
+// We are making HTML dynamic using js
 
 document.getElementById("appcontent").innerHTML = "Content from JS";
 
@@ -27,28 +30,17 @@ document.getElementById("appcontent").innerHTML = "Content from JS";
 //This data will come from server
 let productList = [];
 let productListFromServer = [];
-loadDataFromServer();
-renderProducts(productList);
+function setProductListFromServer(productList) {
+  function setProductListFromServer(productList, callbacKFn) {
+  productListFromServer = productList;
+};
+loadDataFromServer(renderProducts);
+renderProducts(productListFromServer);
 function loadDataFromServer() {
   setTimeout(() => {
-    productListFromServer = [
-      {
-        name: "Product 1",
-        price: "$10.00",
-        description: "This is a great product.",
-      },
-      {
-        name: "Product 2",
-        price: "$20.00",
-        description: "This is a great product.",
-      },
-      {
-        name: "Product 3",
-        price: "$30.00",
-        description: "This is a great product.",
-      },
-    ];
+    setProductListFromServer = (productListFromServer, callbackFn);
     console.log("data from server ", productListFromServer);
+    renderProducts(productListFromServer);
   }, 5000);
 }
 
@@ -63,7 +55,7 @@ function renderProducts(productListFromServer) {
     return;
   }
 
-document.getElementById("content").innerHTML = `
+document.getElementById("appcontent").innerHTML = `
     <table>
         <thead>
             <tr>
@@ -86,6 +78,7 @@ document.getElementById("content").innerHTML = `
     </table>
 `;
 }
+
 // document.getElementById("appcontent").innerHTML = `
 //     <table>
 //         <thead>
