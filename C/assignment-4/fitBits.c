@@ -4,9 +4,9 @@ int fitBits(int x, int n) {
     return !(((x << shift) >> shift) ^ x);
 }
 int main() {
-    int number1, number2;
-    printf("Enter 2 numbers : ");
-    scanf("%d %d", &number1, &number2);
-    printf("%d",fitBits(number1, number2));
+    int number, bits;
+    printf("Enter number and bits : ");
+    scanf("%d %d", &number, &bits);
+    printf("%d",fitBits(number, bits));
     return 0;
 }
