@@ -6,6 +6,6 @@ int main() {
     int number, byte;
     printf("Enter number and byte : ");
     scanf("%x %d", &number, &byte);
-    printf("%x",getByte(number, byte));
+    printf("0x%x",getByte(number, byte));
     return 0;
 }
