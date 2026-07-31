@@ -1,6 +1,9 @@
 #include<stdio.h>
-int isPower2(int number) {
-    return (number > 0) && ((number & (number - 1)) == 0);
+int isPower2(int x) {
+    return !(x & (x + ~0)) & !!x & !(x >> 31);
+    
+    // return (number > 0) && ((number & (number - 1)) == 0);
+
     // if ((number & (number - 1)) == 0)
     //     return 1;
     // else return 0;
