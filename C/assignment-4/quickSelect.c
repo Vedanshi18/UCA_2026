@@ -56,7 +56,7 @@ int main() {
         printf("%d ", arr[i]);
     printf("\n");
 
-    int sizes[] = { 10000, 20000, 40000, 80000, 160000 };
+    int sizes[] = { 100000, 200000, 400000, 800000, 1600000 };
 
     int totalSizes = sizeof(sizes) / sizeof(sizes[0]);
     printf("Dataset\t\tRuntime\n");
