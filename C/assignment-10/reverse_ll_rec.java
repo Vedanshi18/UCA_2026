@@ -16,6 +16,7 @@ class reverse_ll_rec {
         }
         System.out.println();
     }
+    
     public static Node reverseLinkedList(Node head) {
         if (head == null || head.next == null) return head;
         Node newHead = reverseLinkedList(head.next);
